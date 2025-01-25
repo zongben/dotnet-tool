@@ -1,4 +1,4 @@
-<h1 class="text-4xl font-bold text-center mb-20 mt-5">Dotnet Tool</h1>
+<h1 class="text-4xl font-bold text-center mb-20 pt-5">Dotnet Tool</h1>
 <div class="flex flex-col items-center">
   <div class="w-5/6">
     <a
