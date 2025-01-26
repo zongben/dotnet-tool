@@ -15,7 +15,7 @@
   };
 </script>
 
-<div class="flex flex-col gap-5 h-full">
+<div class="flex flex-col gap-5 h-full px-5 pt-2">
   <div class="flex-1 flex flex-col">
     <h1 class="text-xl">Text</h1>
     <textarea

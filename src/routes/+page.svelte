@@ -1,11 +1,17 @@
-<h1 class="text-4xl font-bold text-center mb-20 pt-5">Dotnet Tool</h1>
-<div class="flex flex-col items-center">
-  <div class="w-5/6">
-    <a
-      href="/tools/stringbuilder"
-      class="border p-3 rounded-2xl text-3xl w-full block text-center"
-    >
-      String Builder
-    </a>
+<script>
+  import github_icon from "$lib/icons/github.svg";
+</script>
+
+<div class="h-full flex items-center">
+  <div class="flex-1 flex flex-col">
+    <h1 class="text-4xl text-center mb-2">DotnetTool</h1>
+    <div class="flex justify-center items-center">
+      <img src={github_icon} alt="github icon" class="w-[24px] me-2" />
+      <a
+        href="https://github.com/zongben/dotnet-tool"
+        target="_blank"
+        class="text-center">https://github.com/zongben/dotnet-tool</a
+      >
+    </div>
   </div>
 </div>
