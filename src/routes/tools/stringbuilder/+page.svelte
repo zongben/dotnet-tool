@@ -1,8 +1,8 @@
 <script lang="ts">
   import { invoke } from "@tauri-apps/api/core";
 
-  let text = "";
-  let sb = "";
+  let text = $state("");
+  let sb = $state("");
 
   const convert_text = async () => {
     const result: string = await invoke("convert_text", { text });
@@ -36,11 +36,11 @@
     <div class="flex justify-center gap-20">
       <button
         class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400"
-        on:click={convert_text}>Convert</button
+        onclick={convert_text}>Convert</button
       >
       <button
         class="bg-amber-500 text-white px-4 py-2 rounded hover:bg-amber-400"
-        on:click={revert_stringbuilder}>Revert</button
+        onclick={revert_stringbuilder}>Revert</button
       >
     </div>
   </div>
