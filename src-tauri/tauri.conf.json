@@ -13,8 +13,8 @@
     "windows": [
       {
         "title": "dotnet-tool",
-        "width": 800,
-        "height": 600,
+        "width": 1200,
+        "height": 800,
         "center": true,
         "minWidth": 400,
         "minHeight": 300
