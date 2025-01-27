@@ -1,17 +1,15 @@
 <script lang="ts">
   import { invoke } from "@tauri-apps/api/core";
-
-  let text = $state("");
-  let sb = $state("");
+  import { state } from "$lib/states/stringbuilder.svelte";
 
   const convert_text = async () => {
-    const result: string = await invoke("convert_text", { text });
-    sb = result;
+    const result: string = await invoke("convert_text", { text: state.text });
+    state.sb = result;
   };
 
   const revert_stringbuilder = async () => {
-    const result: string = await invoke("revert_stringbuilder", { sb });
-    text = result;
+    const result: string = await invoke("revert_stringbuilder", { sb: state.sb });
+    state.text = result;
   };
 </script>
 
@@ -20,7 +18,7 @@
     <h1 class="text-xl">Text</h1>
     <textarea
       class="border-2 border-gray-300 rounded w-full flex-1"
-      bind:value={text}
+      bind:value={state.text}
     ></textarea>
   </div>
 
@@ -28,7 +26,7 @@
     <h1 class="text-xl">StringBuilder</h1>
     <textarea
       class="border-2 border-gray-300 rounded w-full flex-1"
-      bind:value={sb}
+      bind:value={state.sb}
     ></textarea>
   </div>
 
