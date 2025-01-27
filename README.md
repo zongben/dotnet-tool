@@ -1,6 +1,6 @@
 # Dotnet Tool
 
-A personal-use toolkit for developing dotnet.
+A personal-use Tauri application designed for .NET development.
 
 ## Note
 If you're using Linux with NVIDIA cards, you may encounter a `Failed to create GBM buffer of size error.`  
