@@ -1,7 +1,7 @@
 #[tauri::command]
 pub fn convert_text(text: &str) -> String {
     let mut sb = String::new();
-    sb.push_str("StringBuilder sb = new StringBuilder();\n");
+    sb.push_str("var sb = new StringBuilder();\n");
     text.split('\n').for_each(|line| {
         sb.push_str(&format!(
             "sb.append(\"{}\" + Environment.NewLine);\n",
