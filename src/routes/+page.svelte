@@ -1,5 +1,5 @@
 <script>
-  import github_icon from "$lib/icons/github.svg";
+  import github_icon from "../assets/icons/github.svg";
 </script>
 
 <div class="h-full flex items-center">
