@@ -22,7 +22,7 @@
       <li>
         <a
           href="/tools/stringbuilder"
-          class="text-white block text-center hover:bg-(--sidebar-btn-hover-bg-color) rounded-[10px] py-1 px-5 {active(
+          class="text-white block text-center hover:bg-(--sidebar-btn-hover-bg-color) active:bg-(--sidebar-btn-active-bg-color) rounded-[10px] py-1 px-5 {active(
             '/tools/stringbuilder',
           )}">StringBuilder</a
         >
