@@ -4,4 +4,6 @@
   --sidebar-bg-color: #1a1d33;
   --sidebar-btn-hover-bg-color: #4949cc;
   --sidebar-btn-active-bg-color: #4949cc;
+
+  height: 100vh;
 }
