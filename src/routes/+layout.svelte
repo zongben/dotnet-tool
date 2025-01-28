@@ -9,6 +9,17 @@
       ? "bg-(--sidebar-btn-active-bg-color)"
       : "";
   };
+
+  const sidebarItems = [
+    {
+      name: "StringBuilder",
+      path: "/tools/stringbuilder",
+    },
+    // {
+    //   name: "DAO",
+    //   path: "/tools/dao",
+    // },
+  ];
 </script>
 
 <div class="flex h-full">
@@ -19,14 +30,16 @@
           >DotnetTool</a
         >
       </li>
-      <li>
-        <a
-          href="/tools/stringbuilder"
-          class="text-white block text-center hover:bg-(--sidebar-btn-hover-bg-color) active:bg-(--sidebar-btn-active-bg-color) rounded-[10px] py-1 px-5 {active(
-            '/tools/stringbuilder',
-          )}">StringBuilder</a
-        >
-      </li>
+      {#each sidebarItems as item}
+        <li class="mb-3">
+          <a
+            href={item.path}
+            class="text-white block text-center hover:bg-(--sidebar-btn-hover-bg-color) active:bg-(--sidebar-btn-active-bg-color) rounded-[10px] py-1 px-5 {active(
+              item.path,
+            )}">{item.name}</a
+          >
+        </li>
+      {/each}
     </ul>
   </nav>
   <main class="flex-1">
