@@ -1,6 +1,7 @@
 <script lang="ts">
   import "../app.css";
   import { page } from "$app/state";
+  import { state } from "$lib/states/layout.svelte";
 
   let { children } = $props();
 
@@ -9,17 +10,6 @@
       ? "bg-(--sidebar-btn-active-bg-color)"
       : "";
   };
-
-  const sidebarItems = [
-    {
-      name: "StringBuilder",
-      path: "/tools/stringbuilder",
-    },
-    // {
-    //   name: "DAO",
-    //   path: "/tools/dao",
-    // },
-  ];
 </script>
 
 <div class="flex h-full">
@@ -30,7 +20,7 @@
           >DotnetTool</a
         >
       </li>
-      {#each sidebarItems as item}
+      {#each state.sidebarItems as item}
         <li class="mb-3">
           <a
             href={item.path}
