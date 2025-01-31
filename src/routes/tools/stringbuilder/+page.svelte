@@ -8,7 +8,9 @@
   };
 
   const revert_stringbuilder = async () => {
-    const result: string = await invoke("revert_stringbuilder", { sb: state.sb });
+    const result: string = await invoke("revert_stringbuilder", {
+      sb: state.sb,
+    });
     state.text = result;
   };
 </script>

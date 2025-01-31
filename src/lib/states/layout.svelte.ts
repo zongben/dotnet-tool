@@ -4,6 +4,10 @@ class LayoutState {
       name: "StringBuilder",
       path: "/tools/stringbuilder",
     },
+    {
+      name: "DTOgen",
+      path: "/tools/dtogen",
+    },
   ];
 }
 
