@@ -32,14 +32,14 @@
     ></textarea>
   </div>
 
-  <div class="my-5">
+  <div class="mb-4">
     <div class="flex justify-center gap-20">
       <button
-        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400"
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400 cursor-pointer"
         onclick={convert_text}>Convert</button
       >
       <button
-        class="bg-amber-500 text-white px-4 py-2 rounded hover:bg-amber-400"
+        class="bg-amber-500 text-white px-4 py-2 rounded hover:bg-amber-400 cursor-pointer"
         onclick={revert_stringbuilder}>Revert</button
       >
     </div>
