@@ -1,4 +1,5 @@
 use tauri::generate_handler;
+use tools::dtogen;
 use tools::stringbuilder;
 
 mod tools;
@@ -6,10 +7,12 @@ mod tools;
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_shell::init())
         .plugin(tauri_plugin_opener::init())
         .invoke_handler(generate_handler![
             stringbuilder::convert_text,
-            stringbuilder::revert_stringbuilder
+            stringbuilder::revert_stringbuilder,
+            dtogen::connect
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
