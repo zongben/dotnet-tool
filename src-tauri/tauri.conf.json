@@ -4,7 +4,7 @@
   "version": "0.1.1",
   "identifier": "com.dotnet-tool.app",
   "build": {
-    "beforeDevCommand": "npm run dev",
+    "beforeDevCommand": "go build -o ./src-tauri/bin/dtgo-x86_64-unknown-linux-gnu ./src-dtgo/main.go && npm run dev",
     "devUrl": "http://localhost:1420",
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../build"
@@ -33,6 +33,9 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
+    ],
+    "externalBin": [
+      "bin/dtgo"
     ]
   }
 }
