@@ -4,7 +4,7 @@ pub fn convert_text(text: &str) -> String {
     sb.push_str("var sb = new StringBuilder();\n");
     text.split('\n').for_each(|line| {
         sb.push_str(&format!(
-            "sb.append(\"{}\" + Environment.NewLine);\n",
+            "sb.Append(\"{}\" + Environment.NewLine);\n",
             line.replace('\r', "")
         ));
     });
