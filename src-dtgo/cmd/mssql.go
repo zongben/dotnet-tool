@@ -17,10 +17,10 @@ func init() {
 		Short: "",
 		Long:  "",
 		Run: func(cmd *cobra.Command, args []string) {
-      fmt.Println("host:", host)
-      fmt.Println("init-db:", initDB)
-      fmt.Println("username:", username)
-      fmt.Println("password:", password)
+			fmt.Println("host:", host)
+			fmt.Println("init-db:", initDB)
+			fmt.Println("username:", username)
+			fmt.Println("password:", password)
 		},
 	}
 	mssqlCmd.Flags().StringVarP(&host, "host", "", "", "")
