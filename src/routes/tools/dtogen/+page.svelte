@@ -1,24 +1,20 @@
 <script lang="ts">
   // import trash from "../../../assets/icons/trash.png";
   import { invoke } from "@tauri-apps/api/core";
+  import { state } from "$lib/states/dtogen.svelte";
 
   const spanClass = "md:text-end";
   const inputClass =
     "border-b border-b-gray-500 md:col-span-3 mb-3 md:mb-0 ps-1";
   const selectClass = "md:col-span-3 mb-3 md:mb-0 border border-gray-500";
 
-  let host = "";
-  let init_db = "";
-  let username = "";
-  let password = "";
-
   const connect = async () => {
     await invoke("connect", {
       args: {
-        host,
-        init_db,
-        username,
-        password,
+        host: state.host,
+        init_db: state.init_db,
+        username: state.username,
+        password: state.password,
       },
     })
       .then((value) => {
@@ -47,13 +43,13 @@
       <!-- <option>sqlite</option> -->
     </select>
     <span class={spanClass}>host:</span>
-    <input type="text" class={inputClass} bind:value={host} />
+    <input type="text" class={inputClass} bind:value={state.host} />
     <span class={spanClass}>init db:</span>
-    <input type="text" class={inputClass} bind:value={init_db} />
+    <input type="text" class={inputClass} bind:value={state.init_db} />
     <span class={spanClass}>username:</span>
-    <input type="text" class={inputClass} bind:value={username} />
+    <input type="text" class={inputClass} bind:value={state.username} />
     <span class={spanClass}>password:</span>
-    <input class={inputClass} bind:value={password} />
+    <input class={inputClass} bind:value={state.password} />
   </div>
   <div class="mt-8">
     <button
