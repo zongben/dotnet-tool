@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "dtgo/cmd"
 
 func main() {
-  fmt.Println("Hello, World!")
+	cmd.Execute()
 }
