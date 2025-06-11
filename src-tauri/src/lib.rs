@@ -8,8 +8,8 @@ pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
         .invoke_handler(generate_handler![
-            stringbuilder::convert_text,
-            stringbuilder::revert_stringbuilder
+            stringbuilder::convert,
+            stringbuilder::revert
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

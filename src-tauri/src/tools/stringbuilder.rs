@@ -1,5 +1,5 @@
 #[tauri::command]
-pub fn convert_text(text: &str) -> String {
+pub fn convert(text: &str) -> String {
     let mut sb = String::new();
     sb.push_str("var sb = new StringBuilder();\n");
     text.split('\n').for_each(|line| {
@@ -13,7 +13,7 @@ pub fn convert_text(text: &str) -> String {
 }
 
 #[tauri::command]
-pub fn revert_stringbuilder(sb: &str) -> String {
+pub fn revert(sb: &str) -> String {
     let mut text = String::new();
     sb.split('\n').for_each(|line| {
         if let Some(start) = line.find('"') {

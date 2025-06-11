@@ -3,12 +3,12 @@
   import { state } from "$lib/states/stringbuilder.svelte";
 
   const convert_text = async () => {
-    const result: string = await invoke("convert_text", { text: state.text });
+    const result: string = await invoke("convert", { text: state.text });
     state.sb = result;
   };
 
   const revert_stringbuilder = async () => {
-    const result: string = await invoke("revert_stringbuilder", { sb: state.sb });
+    const result: string = await invoke("revert", { sb: state.sb });
     state.text = result;
   };
 </script>
