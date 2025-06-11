@@ -26,6 +26,8 @@ pub fn revert_stringbuilder(sb: &str) -> String {
             }
         }
     });
-    text.remove(text.len() - 1);
+    if !text.is_empty() {
+        text.remove(text.len() - 1);
+    }
     text
 }
