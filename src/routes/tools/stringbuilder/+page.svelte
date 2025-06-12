@@ -1,6 +1,7 @@
 <script lang="ts">
   import { invoke } from "@tauri-apps/api/core";
   import { state } from "$lib/states/stringbuilder.svelte";
+  import TextArea from "$lib/components/TextArea.svelte";
 
   const convert_text = async () => {
     const result: string = await invoke("convert", { text: state.text });
@@ -16,18 +17,12 @@
 <div class="flex flex-col gap-5 h-full px-5 pt-2">
   <div class="flex-1 flex flex-col">
     <h1 class="text-xl">PlainText</h1>
-    <textarea
-      class="border-2 border-gray-300 rounded w-full flex-1"
-      bind:value={state.text}
-    ></textarea>
+    <TextArea bind:text={state.text} />
   </div>
 
   <div class="flex-1 flex flex-col">
     <h1 class="text-xl">StringBuilder</h1>
-    <textarea
-      class="border-2 border-gray-300 rounded w-full flex-1"
-      bind:value={state.sb}
-    ></textarea>
+    <TextArea bind:text={state.sb} />
   </div>
 
   <div class="my-5">
