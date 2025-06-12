@@ -4,6 +4,10 @@ class LayoutState {
       name: "StringBuilder",
       path: "/tools/stringbuilder",
     },
+    {
+      name: "dbHelper",
+      path: "/tools/dbhelper",
+    }
   ];
 }
 
